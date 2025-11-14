@@ -1,0 +1,52 @@
+# Netlify Build Hook 触发器
+# 
+# 当内容仓库更新时,通过 Netlify Build Hook 触发重新部署
+# 
+# 配置步骤:
+# 1. 在 Netlify 站点设置中获取 Build Hook URL
+#    Site settings → Build & deploy → Build hooks → Add build hook
+# 2. 在本仓库添加 Secret:
+#    Settings → Secrets → New repository secret
+#    Name: NETLIFY_BUILD_HOOK
+#    Value: 粘贴 Build Hook URL
+# 3. 推送代码测试
+
+name: Trigger Netlify Deployment
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      # 只在内容文件变化时触发
+      - 'posts/**'
+      - 'spec/**'
+      - 'data/**'
+      - 'images/**'
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify Build Hook
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST -d '{}' "${{ secrets.NETLIFY_BUILD_HOOK }}")
+          http_code=$(echo "$response" | tail -n1)
+          
+          if [ "$http_code" -eq 200 ] || [ "$http_code" -eq 201 ]; then
+            echo "✅ Netlify build triggered successfully"
+          else
+            echo "❌ Failed to trigger build. HTTP code: $http_code"
+            exit 1
+          fi
+      
+      - name: Job summary
+        if: success()
+        run: |
+          echo "✅ Netlify build triggered successfully" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit Details:**" >> $GITHUB_STEP_SUMMARY
+          echo "- SHA: \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Message: ${{ github.event.head_commit.message }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Author: ${{ github.event.head_commit.author.name }}" >> $GITHUB_STEP_SUMMARY

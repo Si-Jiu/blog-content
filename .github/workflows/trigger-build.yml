@@ -1,0 +1,45 @@
+# 当内容仓库有新提交时,自动触发代码仓库 (Mizuki) 的部署工作流
+# 这样可以确保内容更新后立即重新部署站点
+# 
+# 配置步骤请查看文件底部注释
+
+name: Trigger Main Repo Build
+
+on:
+  push:
+    branches:
+      - master  # 或你使用的主分支名称 (main/develop 等)
+    paths:
+      # 只在内容文件变化时触发,避免不必要的构建
+      - 'posts/**'
+      - 'spec/**'
+      - 'data/**'
+      - 'images/**'
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger repository dispatch
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.DISPATCH_TOKEN }}
+          repository: your-username/Mizuki  # ⚠️ 改为你的代码仓库,格式: owner/repo
+          event-type: content-updated
+          client-payload: |
+            {
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}",
+              "message": "${{ github.event.head_commit.message }}",
+              "author": "${{ github.event.head_commit.author.name }}"
+            }
+
+      - name: Job summary
+        run: |
+          echo "✅ Successfully triggered build for main repository" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Details:**" >> $GITHUB_STEP_SUMMARY
+          echo "- Commit: \`${{ github.sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "- Message: ${{ github.event.head_commit.message }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Author: ${{ github.event.head_commit.author.name }}" >> $GITHUB_STEP_SUMMARY
