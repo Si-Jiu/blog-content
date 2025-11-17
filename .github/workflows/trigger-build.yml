@@ -25,7 +25,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.DISPATCH_TOKEN }}
-          repository: your-username/Mizuki  # ⚠️ 改为你的代码仓库,格式: owner/repo
+          repository: Si-Jiu/blog  # ⚠️ 改为你的代码仓库,格式: owner/repo
           event-type: content-updated
           client-payload: |
             {
