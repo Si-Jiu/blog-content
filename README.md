@@ -7,13 +7,15 @@
 ```
 Mizuki-Content/
 ├── posts/              # 博客文章 (Markdown)
-│   ├── *.md           # 文章文件
-│   └── guide/         # 指南类文章
+│   ├── *.md           # 单文件形式文章
+│   └── guide/         # 文件夹形式文章
 ├── spec/              # 特殊页面
 │   ├── about.md       # 关于页面
 │   └── friends.md     # 友链页面
 ├── data/              # 结构化数据
 │   ├── anime.ts       # 番剧数据
+│   ├── devices.ts     # 设备数据
+│   ├── diary.ts       # 日记数据
 │   ├── projects.ts    # 项目展示
 │   ├── skills.ts      # 技能数据
 │   └── timeline.ts    # 时间线
