@@ -88,6 +88,19 @@ export const timelineData: TimelineItem[] = [
 		showDuration: false,
 	},
 	{
+		id: "hkoi-j-202526",
+		title: "HKOI 初级组 2025/26",
+		description: "210分 铜奖",
+		type: "achievement",
+		startDate: "2025-12-06",
+		endDate: "2025-12-06",
+		location: "香港",
+		organization: "XX中学",
+		icon: "material-symbols:emoji-events",
+		color: "#2563EB",
+		showDuration: false,
+	},
+	{
 		id: "first-programming-experience",
 		title: "首次编程经验",
 		description: "第一次接触代码，学习Python基本语法",
@@ -102,7 +115,7 @@ export const timelineData: TimelineItem[] = [
 	},
 	{
 		id: "first-oi-experience",
-		title: "首次OI经验 - CSP-J 2023",
+		title: "首次OI经验 | CSP-J 2023",
 		description: "倒在了初赛",
 		type: "education",
 		startDate: "2023-09-16",
