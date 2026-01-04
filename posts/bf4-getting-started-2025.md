@@ -3,7 +3,7 @@ title: 战地4入坑教程2025
 published: 2025-10-12
 description: '针对之前踩过的坑做一个总结'
 image: ''
-tags: [战地, EA]
+tags: [EA, Battlefield]
 category: '游戏'
 draft: false 
 lang: 'zh_CN'
