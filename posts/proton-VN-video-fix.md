@@ -3,7 +3,7 @@ title: 修复Proton运行视觉小说时无法播放视频
 published: 2026-01-04
 description: "一播放就报错/闪退/被跳过"
 tags: [Visual Novel, Linux, Proton]
-category: "游戏"
+category: "Game"
 draft: false
 lang: "zh_CN"
 ---
@@ -18,9 +18,40 @@ lang: "zh_CN"
 
 ### 前置步骤
 
+#### 免责声明
+
+::: caution
+本教程不保证正确性，请自行判断每个步骤
+:::
+
 #### 安装 AUR Helper（仅 Arch 系 Linux）
 
-请自行搜索（其实就是懒得写，有空就补）
+##### 使用 ArchLinuxCN
+
+编辑 pacman 配置文件
+
+```bash
+sudo vim /etc/pacman.conf
+```
+
+按下 `Shift` + `G` 键，在文件末尾添加内容：
+
+```plaintext
+[archlinuxcn]
+Server = https://mirrors.aliyun.com/archlinuxcn/$arch
+```
+
+按下 `:` 键，输入 `wq`  
+
+随后再安装 `yay` 或者 `paru`（根据个人喜好）
+
+```bash
+sudo pacman -Syyu yay 
+```
+
+##### 手动安装
+
+懒得写了~
 
 ### 方法1（GE-Proton）
 
@@ -45,7 +76,7 @@ protonup-qt
 
 等待窗口打开后， `Install For` 选择你的游戏管理应用，例如你在 Steam 上的游戏就选 `Steam` ，如是本地游戏可以通过 `Lutris` 等游戏管理器，请自行寻找教程安装。  
 点击左下角 `Add version`  
-打开弹窗，在 `Compatibility tool` 处选择 `GE-Proton`， `Version` 处选择最新的版本，点击左下角 `Install`  
+打开弹窗，在 `Compatibility tool` 处选择 `GE-Proton`， `Version` 处选择最新版本（如最新版本不能解决请尝试9-X版本），点击左下角 `Install`  
 等待进度条完成之后，点击右下角 `Close`。如 Steam 在安装时打开，请重启 Steam。
 
 #### 使用GE-Proton打开游戏
