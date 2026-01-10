@@ -4,7 +4,7 @@ published: 2025-10-12
 description: '针对之前踩过的坑做一个总结'
 image: ''
 tags: [EA, Battlefield]
-category: '游戏'
+category: 'Game'
 draft: false 
 lang: 'zh_CN'
 ---

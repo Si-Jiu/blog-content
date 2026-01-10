@@ -4,7 +4,7 @@ published: 2025-08-21
 description: '虽然但是为什么要gcc配clangd，但是打OI用起来还行'
 image: ''
 tags: [C++, VSCode]
-category: '编程'
+category: 'Code'
 draft: false 
 lang: 'zh_CN'
 ---

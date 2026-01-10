@@ -4,7 +4,7 @@ published: 2025-11-01
 description: '你给我干哪来了这还是CSP吗'
 image: ''
 tags: [OI, C++]
-category: '编程'
+category: 'Code'
 draft: false 
 lang: 'zh_CN'
 ---

@@ -4,7 +4,7 @@ published: 2025-05-15
 description: "link2ea://launchgame/...."
 image: "https://i.imgur.com/q8kCYPd.png"
 tags: [EA, Battlefield]
-category: "游戏"
+category: "Game"
 draft: false
 lang: "zh_CN"
 ---
