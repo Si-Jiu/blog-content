@@ -11,18 +11,20 @@ lang: "zh_CN"
 ## 前言
 
 推 Gal 时发现 OP 和 ED 不是无法播放就是报错，研究了会。  
-~~I use arch btw~~ 作者使用系统为 `Arch Linux` ，所以非 `Arch 系 Linux`（如 `Arch Linux`, `SteamOS`, `Manjaro`）的用户在安装软件包时请自行处理。  
+~~I use arch btw~~ 作者使用系统为 `Arch Linux` ，所以非 `Arch 系 Linux`（如 `Arch Linux`, `SteamOS`, `Manjaro`, `CachyOS`）的用户在安装软件包时请自行寻找安装办法（自行编译或者寻找预编译的包）  
 本教程主要处理 Steam 上的游戏，其他游戏管理器的自行判断如何选择。
+
+文章最后有不同 VN [已经验证的解决方案](#已经验证的解决方法)
+
+## 免责声明
+
+:::caution
+请自行判断每个步骤的正确性，如因自己的操作导致系统损坏与本教程无关
+:::
 
 ## 解决方法
 
 ### 前置步骤
-
-#### 免责声明
-
-:::caution
-本教程不保证正确性，请自行判断每个步骤
-:::
 
 #### 安装 AUR Helper（仅 Arch 系 Linux）
 
@@ -104,18 +106,6 @@ protonup-qt
 yay -S winetricks protontricks
 ```
 
-#### 使用 Proton Experimental
-
-打开Steam，右键游戏，选择 `属性`。  
-在弹窗中点击 `兼容性` ，勾选`强制使用特定 Steam Play 兼容性工具`，下面选择框选择 `Proton Experimental`  
-
-#### 清空 Prefix
-
-随便右键一个下载了的游戏，属性->浏览本地文件  
-向上2次返回目录，返回到 `Steam/steamapps/` 结尾的目录  
-进入 `compatdata` 目录， 删除名字为游戏ID（可在[安装组件](#安装组件)部分中打开 Proton Tricks 时看见）的目录。  
-使用 `Proton Experimental` 进入一次游戏后退出。
-
 #### 安装组件
 
 ##### 打开 Proton Tricks
@@ -144,6 +134,32 @@ protontricks --gui
 ## 修复完后
 
 现在打开游戏，可以通过类似鉴赏模式等功能查看 OP 和 ED 能不能正常播放。  
-(KrKr引擎的游戏) 如不行可以将鼠标划到最上面，会出现顶栏，在帮助一栏点击显示高级设置。再到顶栏中点击高级设置，在视频显示模式中选择自动。  
-如果方法1和2都试过了还是不行可以看看 [Proton DB](https://www.protondb.com/) 中游戏的评论提供的方法。  
-~~还是不行那就可以放弃了，装 Windows + Linux 双系统吧。~~
+(KrKr 引擎的游戏) 如不行可以将鼠标划到最上面，会出现顶栏，在帮助->显示高级设置，再顶栏->高级设置->视频显示模式->自动。  
+
+## 已经验证的解决方法
+
+### 柚子社作品
+
+Steam 上的 魔女的夜宴（中文版），千恋*万花，Riddle Joker，星光咖啡厅与死神之碟 已经过测试
+Hikari Field 上的 天使☆嚣嚣RE-BOOT! 暂时未经过测试，有空就测  
+
+使用 GE-Proton 9-25（9版本的应该都行）  
+顶栏->帮助->启用高级设置，顶栏->高级设置->视频设置->自动  
+现在看 OP 是正常的，但是 ED 是无法播放的  
+Proton Tricks 中安装 `wmp9`（`wmp11`会导致播放时报错） 和 `directshow` 也许可以修好 ED 无法播放的问题（**是也许**）  
+如果遇到画面出现闪烁，鼠标指针拖不动，请到设置里开启全屏模式  
+
+~~柚子社的是真麻烦，试了几个小时还是没试出来能用的，网上将的 `wmp9 + directshow` 在我这还是照样无法播放😭~~
+
+### 星空列车与白的旅行
+
+使用 GE-Proton 10-28
+
+### ATRI -My Dear Moments-
+
+使用 GE-Proton 10-28
+
+## 修复不了？
+
+如果文章给出的方法试过了还是不行可以看看 [Proton DB](https://www.protondb.com/) 中游戏的评论提供的方法，或者自行搜索，当然还可以自己尝试组合排列 Proton 版本和需要安装的组件  
+~~还是不行那就可以放弃了，装 Windows + Linux 双系统吧或者跳过视频自己去网上找着看吧~~
