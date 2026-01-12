@@ -1,5 +1,5 @@
 ---
-title: 修复Proton运行视觉小说时无法播放视频
+title: 修复 Proton 运行视觉小说时无法播放视频
 published: 2026-01-11
 description: "一播放就报错/闪退/被跳过"
 tags: [Visual Novel, Linux, Proton]
