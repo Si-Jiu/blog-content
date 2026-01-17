@@ -16,7 +16,7 @@ export type DeviceCategory = {
 };
 
 export const devicesData: DeviceCategory = {
-	Phone: [
+	手机: [
 		{
 			name: "iPhone 7 Plus",
 			image:
@@ -26,7 +26,7 @@ export const devicesData: DeviceCategory = {
 			link: "https://support.apple.com/zh-cn/111953",
 		},
 	],
-	Tablet: [
+	平板: [
 		{
 			name: "iPad (第 9 代)",
 			image:
@@ -36,7 +36,7 @@ export const devicesData: DeviceCategory = {
 			link: "https://support.apple.com/zh-cn/111898",
 		},
 	],
-	Laptop: [
+	笔记本: [
 		{
 			name: "Dell Inspiron 14 5410",
 			image: "https://i.imgur.com/rjiPrOB.png",
