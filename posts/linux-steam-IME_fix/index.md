@@ -1,7 +1,7 @@
 ---
-title: 修复Steam在Wayland下的输入法问题
+title: 修复 Steam 在 Wayland 下的输入法问题
 published: 2026-02-18
-description: '什么时候Linux能有完美的输入法方案呢'
+description: '什么时候 Linux 能有完美的输入法方案呢'
 image: ''
 tags: [Steam, Linux]
 category: "Game"
