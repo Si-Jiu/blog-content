@@ -27,13 +27,13 @@ export interface TimelineItem {
 export const timelineData: TimelineItem[] = [
 	{
 		id: "school-robotics-team",
-		title: "学校机器人队",
-		description: "正在学习开发水底机器人的编程部分和电子部分",
+		title: "学校机械人队",
+		description: "正在学习开发水底机器人的编程部分",
 		type: "education",
 		startDate: "2025-08-20",
 		location: "香港",
 		organization: "XX中学",
-		skills: ["Arduino", "C++"],
+		skills: ["Arduino", "C++", "Python"],
 		icon: "material-symbols:school",
 		color: "#059669",
 		featured: true,
@@ -64,7 +64,7 @@ export const timelineData: TimelineItem[] = [
 	{
 		id: "csp-j-2024",
 		title: "CSP-J 2024",
-		description: "160分 三等奖",
+		description: "三等奖",
 		type: "achievement",
 		startDate: "2024-10-26",
 		endDate: "2024-10-26",
@@ -77,7 +77,7 @@ export const timelineData: TimelineItem[] = [
 	{
 		id: "csp-j-2025",
 		title: "CSP-J 2025",
-		description: "255分 二等奖",
+		description: "二等奖",
 		type: "achievement",
 		startDate: "2025-11-01",
 		endDate: "2025-11-01",
@@ -90,7 +90,7 @@ export const timelineData: TimelineItem[] = [
 	{
 		id: "hkoi-j-202526",
 		title: "HKOI 初级组 2025/26",
-		description: "210分 铜奖",
+		description: "铜奖",
 		type: "achievement",
 		startDate: "2025-12-06",
 		endDate: "2025-12-06",
@@ -115,7 +115,7 @@ export const timelineData: TimelineItem[] = [
 	},
 	{
 		id: "first-oi-experience",
-		title: "首次OI经验 | CSP-J 2023",
+		title: "CSP-J 2023 | 首次OI经验",
 		description: "倒在了初赛",
 		type: "education",
 		startDate: "2023-09-16",
