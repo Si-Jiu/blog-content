@@ -1,5 +1,12 @@
-# 欢迎来到我的主页
+欢迎来到我的主页~
 
-Welcome ~~, welcome to city 17~~ ，暂时还没想好这里写些什么……  
-现在博客页面到别的分页了~，顶栏点击文章即可查看！
-这个网站是基于 [Mizuki](https://github.com/matsuzaka-yuki/Mizuki)，添加了主页（也就是这里）后续会添加更多功能！  
+## 关于我
+
+一位普通的初中生~  
+编程和游戏都特菜😭  
+你可以在[这里](/friends/)中选择`我的`找到我的其他网站
+
+## 关于主页
+
+基于:
+::github{repo="matsuzaka-yuki/Mizuki"}
