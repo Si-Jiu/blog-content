@@ -46,7 +46,7 @@ export const friendsData: FriendItem[] = [
 	},
 	{
 		id: 5,
-		title: "老主页2",
+		title: "老主页 Neo",
 		imgurl: "https://legacy-neo.sijiu49.moe/favicon.ico",
 		desc: "纯乱写",
 		siteurl: "https://legacy-neo.sijiu49.moe/",
@@ -60,6 +60,23 @@ export const friendsData: FriendItem[] = [
 		siteurl: "https://steam-review.sijiu49.moe/",
 		tags: ["我的"],
 	},
+	{
+		id: 7,
+		title: "服务在线监测",
+		imgurl: "https://uptime.sijiu49.moe/favicon.ico",
+		desc: "我的服务监测",
+		siteurl: "https://uptime.sijiu49.moe/",
+		tags: ["我的"],
+	},
+	{
+		id: 8,
+		title: "友站在线监测",
+		imgurl: "https://uptime.sijiu49.moe/favicon.ico",
+		desc: "监测友链的在线状态",
+		siteurl: "https://uptime.sijiu49.moe/status/friends",
+		tags: ["我的"],
+	},
+	
 ];
 
 // 获取所有友情链接数据
