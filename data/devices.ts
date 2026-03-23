@@ -57,7 +57,7 @@ export const devicesData: DeviceCategory = {
 	耳机: [
 		{
 			name: "Rapoo VH850",
-			image: "https://rpw.rapoo.cn/goods/gallery/1729825581933.jpg",
+			image: "https://i.imgur.com/RHCDEJK.png",
 			specs: "三模 / RGB",
 			description: "便宜好使",
 			link: "https://www.rapoo.cn/product/819",
