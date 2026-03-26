@@ -11,10 +11,11 @@ lang: "zh_CN"
 ## 前言
 
 推 Gal 时发现 OP 和 ED 不是无法播放就是报错，研究了会。  
-~~I use arch btw~~ 作者使用系统为 `Arch Linux` ，所以非 `Arch 系 Linux`（如 `Arch Linux`, `SteamOS`, `Manjaro`, `CachyOS`）的用户在安装软件包时请自行寻找安装办法（自行编译或者寻找预编译的包）  
+~~I use arch btw~~ 作者使用系统为 `Arch Linux` ，所以非 `Arch 系 Linux` 的用户在安装软件包时请自行寻找安装办法（自行编译或者寻找预编译的包）  
+常见 `Arch 系 Linux`：`Arch Linux`, `SteamOS (Steam Deck 使用)`, `Manjaro`, `CachyOS`  
 本教程主要处理 Steam 上的游戏，其他游戏管理器的自行判断如何选择。
 
-文章最后有不同 VN [已经验证的解决方案](#已经验证的解决方法)
+文章最后有不同 VN [尝试过的解决方案](#尝试过的解决方法)
 
 ## 免责声明
 
@@ -78,7 +79,7 @@ protonup-qt
 
 等待窗口打开后， `Install For` 选择你的游戏管理应用，例如你在 Steam 上的游戏就选 `Steam` ，如是本地游戏可以通过 `Lutris` 等游戏管理器，请自行寻找教程安装。  
 点击左下角 `Add version`  
-打开弹窗，在 `Compatibility tool` 处选择 `GE-Proton`， `Version` 处选择最新版本（如最新版本不能解决请尝试9-X版本），点击左下角 `Install`  
+打开弹窗，在 `Compatibility tool` 处选择 `GE-Proton`， `Version` 处选择最新版本（如最新版本不能解决请尝试老版本），点击左下角 `Install`  
 等待进度条完成之后，点击右下角 `Close`。如 Steam 在安装时打开，请重启 Steam。
 
 #### 使用GE-Proton打开游戏
@@ -136,9 +137,20 @@ protontricks --gui
 现在打开游戏，可以通过类似鉴赏模式等功能查看 OP 和 ED 能不能正常播放。  
 (KrKr 引擎的游戏) 如不行可以将鼠标划到最上面，会出现顶栏，在帮助->显示高级设置，再顶栏->高级设置->视频显示模式->自动。  
 
-## 已经验证的解决方法
+## 尝试过的解决方法
 
 ### 柚子社作品
+
+使用 Proton Experimental  
+OP 和 ED 直接跳过  
+下面是不会跳过但是有其他问题的方法
+
+#### DRACU-RIOT!（Steam QHD版）
+
+使用 GE-Proton 10-34  
+OP 闪退，ED 正常
+
+#### 其他作品
 
 Steam 上的 魔女的夜宴（中文版），千恋*万花，Riddle Joker，星光咖啡厅与死神之碟 已经过测试
 Hikari Field 上的 天使☆嚣嚣RE-BOOT! 暂时未经过测试，有空就测  
