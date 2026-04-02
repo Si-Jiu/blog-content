@@ -67,15 +67,7 @@ export const friendsData: FriendItem[] = [
 		desc: "我的服务监测",
 		siteurl: "https://uptime.sijiu49.moe/",
 		tags: ["我的"],
-	},
-	{
-		id: 8,
-		title: "友站在线监测",
-		imgurl: "https://uptime.sijiu49.moe/favicon.ico",
-		desc: "监测友链的在线状态",
-		siteurl: "https://uptime.sijiu49.moe/status/friends",
-		tags: ["我的"],
-	},
+	}
 	
 ];
 
